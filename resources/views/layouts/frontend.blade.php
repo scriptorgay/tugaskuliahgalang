@@ -7,13 +7,13 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content="Toko Codekop Menjual berbagai macam hijab, jaket, aksesoris dan pakaian islami pria dan wanita" name="description">
+        <meta content="App Toko" name="description">
         <meta content="{{ $title ?? 'App Toko' }}" name="keywords">
         <meta property="og:locale" content="ID_id"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:image" content="{{ asset('assets/img/keranjang.png') }}">
+        <meta property="og:image" content="{{ asset('assets/img/ikan.png') }}">
         <!-- Bootstrap CSS -->
-        <link rel="shortcut icon" href="{{ asset('assets/img/keranjang.png') }}">
+        <link rel="shortcut icon" href="{{ asset('assets/img/ikan.png') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="{{ asset('assets/css/main.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,7 +22,9 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-md navbar-custom shadow-sm py-3 fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><b>{{ config('app.name') }}</b></a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="{{ asset('assets/img/logo_de.png') }}" width="130" height="70" alt="">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon text-dark pt-2"><i class="fas fa-bars"></i></span>
                 </button>
@@ -37,6 +39,7 @@
                                 aria-current="page" 
                                 href="{{ url('kategori/'.$r->id) }}">
                                 {{ $r->nama_kategori }}
+                                <img src="{{ asset('assets/img/ikon.png') }}" width="30" height="30" alt="">
                             </a>
                         </li>
                         @endforeach
@@ -82,12 +85,14 @@
                     </div>
                     <div class="col-sm-4">
                         <h4>Tetap Terhubung Dengan Kami</h4>
+                        <!-- 
                         <a href="#" class="text-terhubung"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="text-terhubung"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-terhubung"><i class="fab fa-news"></i></a>
                         <a href="#" class="text-terhubung"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="text-terhubung"><i class="fab fa-youtube"></i></a>
                         <a href="#" class="text-terhubung"><i class="fab fa-linkedin"></i></a>
+                        -->
                     </div>
                 </div>
             </div>
@@ -96,7 +101,7 @@
             <div class="container text-center">
                 Copyright &copy; <?= date('Y');?> {{ config('app.name') }} All Reserved
                 <br>
-                Web Belajar Laravel Codekop.com
+                Devrillia Seafood
             </div>
         </div>
         <!-- end footer -->
